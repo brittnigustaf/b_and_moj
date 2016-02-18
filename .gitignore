@@ -1,0 +1,11 @@
+# ignore node_modules
+/node_modules
+# ignore typings
+/typings
+# ignore debug logs
+npm-debug.log
+
+#ignore generated files
+**/*.js
+**/*.js.map
+
