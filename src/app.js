@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import ParallaxHeader from './components/parallax-header/parallax-header.js';
+import SlidingPage from './components/sliding-page/sliding-page.js';
+import SlidingPages from './components/sliding-pages/sliding-pages.js';
 
 import './app.css';
 
@@ -12,10 +13,11 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <ParallaxHeader />
-        <p className="app-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <SlidingPages>
+          <SlidingPage />
+          <SlidingPage />
+          <SlidingPage />
+        </SlidingPages>
       </div>
     );
   }

@@ -1,0 +1,9 @@
+.sliding-pages {
+    position: absolute;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
