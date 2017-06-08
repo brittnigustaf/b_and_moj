@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { isInt } from '../../utils/number-utils/number-utils.js';
+import { isInt } from '../../utils/number-utils/number-utils';
 
 import './sliding-pages.css';
 
 const propTypes = {
+  currPage: PropTypes.number.isRequired,
   children: PropTypes.arrayOf(PropTypes.element)
 };
 
 class SlidingPages extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currPage: 0
-    };
-  }
-
   render() {
-    const { children } = this.props;
-    const { currPage } = this.state;
+    const { currPage, children } = this.props;
     const currPosition = isInt(currPage) ? currPage * 100 * -1 : 0;
 
     return (
