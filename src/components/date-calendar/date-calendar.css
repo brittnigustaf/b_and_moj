@@ -1,0 +1,18 @@
+.minimal-calendar {
+  font-family: 'Bubbler One', sans-serif;
+  font-size: 22px;
+}
+
+.month-name {
+  margin: 10px 0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+}
+
+.day-name {
+  font-weight: 600;
+}
+
+.calendar-day {
+  padding: 0 7px;
+}
