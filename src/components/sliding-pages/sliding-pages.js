@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { isInt } from '../../utils/number-utils/number-utils';
+import { isInt } from '../../utils/number/number-utils';
 
 import './sliding-pages.css';
 

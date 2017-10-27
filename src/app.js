@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import logo from './logo.svg';
 import { setPage } from './actions/page-actions';
+import DateCalendar from './components/date-calendar/date-calendar';
 import SlidingPage from './components/sliding-page/sliding-page';
 import SlidingPages from './components/sliding-pages/sliding-pages';
-import DateCalendar from './components/date-calendar/date-calendar';
+import { MONTHS, IMPORTANT_DATES } from './constants/date/date-constants';
+import { compareDates } from './utils/date/date-utils';
 
 import './app.css';
 
@@ -15,8 +17,17 @@ const propTypes = {
 };
 
 export class App extends Component {
-  onDateClick = newPageIndex => {
-    const { dispatch } = this.props;
+  onDateClick = date => {
+    const { currPage, dispatch } = this.props;
+
+    let newPageIndex = currPage;
+    IMPORTANT_DATES().forEach((importantDate, index) => {
+      if (compareDates(date, importantDate.date)) {
+        newPageIndex = index;
+        return;
+      }
+    });
+
     dispatch(setPage(newPageIndex));
   };
 
@@ -28,7 +39,18 @@ export class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <DateCalendar onClick={this.onDateClick} />
+        <DateCalendar
+          month={MONTHS.MAY}
+          year={2018}
+          importantDates={IMPORTANT_DATES(MONTHS.MAY)}
+          onClick={this.onDateClick}
+        />
+        <DateCalendar
+          month={MONTHS.JUNE}
+          year={2018}
+          importantDates={IMPORTANT_DATES(MONTHS.JUNE)}
+          onClick={this.onDateClick}
+        />
         <SlidingPages currPage={currPage}>
           <SlidingPage />
           <SlidingPage />
