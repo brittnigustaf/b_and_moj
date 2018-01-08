@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {
   DAYS,
   DAYS_IN_WEEK,
@@ -48,7 +48,9 @@ class DateCalendar extends Component {
     for (let day = 0; day < DAYS_IN_WEEK; day++) {
       const name = DAYS.readableName[day];
       columnHeaders[day] = (
-        <td className="day-name" key={`day-${day}-${name}`}>{name}</td>
+        <td className="day-name" key={`day-${day}-${name}`}>
+          {name}
+        </td>
       );
     }
     return <tr>{columnHeaders}</tr>;
@@ -89,15 +91,17 @@ class DateCalendar extends Component {
 
         days[day] = (
           <td className="calendar-day" key={`day-${index}`}>
-            {isImportantDate
-              ? <button
-                  className="important-date"
-                  type="button"
-                  onClick={() => onClick(currDate)}
-                >
-                  {date}
-                </button>
-              : date}
+            {isImportantDate ? (
+              <button
+                className="important-date"
+                type="button"
+                onClick={() => onClick(currDate)}
+              >
+                {date}
+              </button>
+            ) : (
+              date
+            )}
           </td>
         );
       }

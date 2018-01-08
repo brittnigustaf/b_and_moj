@@ -1,71 +1,63 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { setPage } from './actions/page-actions';
 import ComingSoon from './components/coming-soon/coming-soon';
-import DateCalendar from './components/date-calendar/date-calendar';
-import SlidingPage from './components/sliding-page/sliding-page';
-import SlidingPages from './components/sliding-pages/sliding-pages';
-import { MONTHS, IMPORTANT_DATES } from './constants/date/date-constants';
-import { compareDates } from './utils/date/date-utils';
+import GoogleMaps from './components/google-maps/google-maps';
+import ParallaxHeader from './components/parallax-header/parallax-header';
 
 import './app.css';
 
-const propTypes = {
-  currPage: PropTypes.number.isRequired,
-  dispatch: PropTypes.func.isRequired
-};
-
 export class App extends Component {
-  onDateClick = date => {
-    const { currPage, dispatch } = this.props;
-
-    let newPageIndex = currPage;
-    IMPORTANT_DATES().forEach((importantDate, index) => {
-      if (compareDates(date, importantDate.date)) {
-        newPageIndex = index;
-        return;
-      }
-    });
-
-    dispatch(setPage(newPageIndex));
-  };
-
   render() {
-    const { currPage } = this.props;
     return (
       <div className="app">
-        <div className="app-header">
-          <ComingSoon />
+        <div className="card">
+          <ParallaxHeader />
         </div>
-        <DateCalendar
-          month={MONTHS.MAY}
-          year={2018}
-          importantDates={IMPORTANT_DATES(MONTHS.MAY)}
-          onClick={this.onDateClick}
-        />
-        <DateCalendar
-          month={MONTHS.JUNE}
-          year={2018}
-          importantDates={IMPORTANT_DATES(MONTHS.JUNE)}
-          onClick={this.onDateClick}
-        />
-        <SlidingPages currPage={currPage}>
-          <SlidingPage />
-          <SlidingPage />
-          <SlidingPage />
-        </SlidingPages>
+        <div className="card">
+          <h1> Ceremony </h1>
+          <div className="wrapping-container">
+            <div className="two-column">
+              <div className="image-background spring-grove-background">
+                <div className="event-info">
+                  <h2>June 9, 2018 ♥ 1:00 p.m.</h2>
+                  <h3>Spring Grove Park</h3>
+                  <p>
+                    1800 Greenly Street <br /> Grandville, MI 49418
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="two-column">
+              <GoogleMaps location={{ lat: 42.83265, lng: -85.8255 }} />
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <h1> Reception </h1>
+          <div className="wrapping-container">
+            <div className="two-column">
+              <div className="image-background waddell-center-background">
+                <div className="event-info">
+                  <h2>June 9, 2018 ♥ 6:00 p.m.</h2>
+                  <h3>The Waddell Center</h3>
+                  <p>
+                    1115 Taylor Avenue North <br /> Grand Rapids, MI 49503
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="two-column">
+              <GoogleMaps location={{ lat: 42.982772, lng: -85.668823 }} />
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="placecard">
+            <ComingSoon />
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-App.propTypes = propTypes;
-
-const mapStateToProps = state => {
-  return {
-    currPage: state.currPage
-  };
-};
-
-export default connect(mapStateToProps)(App);
+export default App;
