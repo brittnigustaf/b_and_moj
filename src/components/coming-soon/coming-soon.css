@@ -1,245 +1,166 @@
-
-.sprite {
-    background-position: 0;
-    display: block;
-    position: absolute
-}
-
-.sprite.sparkle {
-    -webkit-animation: sparkle 1.5s steps(17,start) forwards infinite;
-    animation: sparkle 1.5s steps(17,start) forwards infinite;
-    background-image: url(sparkle-2.png);
-    background-position: -731px;
-    background-size: 774px 43px;
-    height: 43px;
-    width: 43px
-}
-
-.sprite.pop {
-    -webkit-animation: pop 2.91666666667s steps(34,start) forwards infinite;
-    animation: pop 2.91666666667s steps(34,start) forwards infinite;
-    background-image: url(sparkle-1.png);
-    background-position: -816px;
-    background-size: 840px 24px;
-    height: 24px;
-    width: 24px
-}
-
-.sprite.cross {
-    -webkit-animation: cross 2.083325s steps(23,start) forwards infinite;
-    animation: cross 2.083325s steps(23,start) forwards infinite;
-    background-image: url(sparkle-3.png);
-    background-position: -600px;
-    background-size: 625px 25px;
-    height: 25px;
-    width: 25px
-}
-
-@-webkit-keyframes sparkle {
-    0% {
-        background-position: 0
-    }
-
-    40% {
-        background-position: -731px
-    }
-
-    to {
-        background-position: -731px
-    }
-}
-
-@keyframes sparkle {
-    0% {
-        background-position: 0
-    }
-
-    40% {
-        background-position: -731px
-    }
-
-    to {
-        background-position: -731px
-    }
-}
-
-@-webkit-keyframes pop {
-    0% {
-        background-position: 0
-    }
-
-    40% {
-        background-position: -816px
-    }
-
-    to {
-        background-position: -816px
-    }
-}
-
-@keyframes pop {
-    0% {
-        background-position: 0
-    }
-
-    40% {
-        background-position: -816px
-    }
-
-    to {
-        background-position: -816px
-    }
-}
-
-@-webkit-keyframes cross {
-    0% {
-        background-position: 0
-    }
-
-    40% {
-        background-position: -600px
-    }
-
-    to {
-        background-position: -600px
-    }
-}
-
-@keyframes cross {
-    0% {
-        background-position: 0
-    }
-
-    40% {
-        background-position: -600px
-    }
-
-    to {
-        background-position: -600px
-    }
-}
-
-
-@-webkit-keyframes float {
-    0% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
-    }
-
-    40% {
-        -webkit-transform: translate3d(0,-6px,0);
-        transform: translate3d(0,-6px,0)
-    }
-
-    to {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
-    }
-}
-
-@keyframes float {
-    0% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
-    }
-
-    40% {
-        -webkit-transform: translate3d(0,-6px,0);
-        transform: translate3d(0,-6px,0)
-    }
-
-    to {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0)
-    }
-}
-
 .coming-soon {
-    position: relative;
-    margin: 75px;
+  position: relative;
+  margin: 75px;
 }
 
 .coming-soon .anim-float {
-    -webkit-animation: float 2.3s forwards ease infinite;
-    animation: float 2.3s forwards ease infinite;
-    position: relative;
-    z-index: 2
+  animation: float 2.3s forwards ease infinite;
+  position: relative;
+  z-index: 2;
 }
 
 .coming-soon-title {
-    font-family: 'Amatic SC', cursive;
-    font-size: 36px;
-    font-weight: 600;
-    color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
 }
 
 .coming-soon .sprite {
-    opacity: .75;
-    z-index: 1
+  background-position: 0;
+  display: block;
+  opacity: 0.75;
+  position: absolute;
+  z-index: 1;
+}
+
+.coming-soon .sprite.sparkle {
+  animation: sparkle 1.5s steps(17, start) forwards infinite;
+  background-image: url(sparkle.png);
+  background-position: -731px;
+  background-size: 774px 43px;
+  height: 43px;
+  width: 43px;
+}
+
+.coming-soon .sprite.pop {
+  animation: pop 2.91666666667s steps(34, start) forwards infinite;
+  background-image: url(pop.png);
+  background-position: -816px;
+  background-size: 840px 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.coming-soon .sprite.cross {
+  animation: cross 2.083325s steps(23, start) forwards infinite;
+  background-image: url(cross.png);
+  background-position: -600px;
+  background-size: 625px 25px;
+  height: 25px;
+  width: 25px;
 }
 
 .coming-soon .pop.one {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    left: -40px;
-    top: 0px;
+  animation-delay: 1s;
+  left: -40px;
+  top: 0px;
 }
 
 .coming-soon .pop.two {
-    right: 25px;
-    top: -50px;
+  right: 25px;
+  top: -50px;
 }
 
 .coming-soon .pop.three {
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    bottom: -40px;
-    left: 75px;
+  animation-delay: 2s;
+  bottom: -40px;
+  left: 75px;
 }
 
 .coming-soon .sparkle.one {
-    -webkit-animation-delay: .9s;
-    animation-delay: .9s;
-    bottom: -50px;
-    left: -65px;
+  animation-delay: 0.9s;
+  bottom: -50px;
+  left: -65px;
 }
 
 .coming-soon .sparkle.two {
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
-    left: 20px;
-    top: -40px;
+  animation-delay: 0.6s;
+  left: 20px;
+  top: -40px;
 }
 
 .coming-soon .sparkle.three {
-    -webkit-animation-delay: 1.2s;
-    animation-delay: 1.2s;
-    bottom: -15px;
-    right: 50px;
+  bottom: -15px;
+  right: 50px;
 }
 
 .coming-soon .sparkle.four {
-    top: -50px;
-    right: -65px;
+  animation-delay: 1.2s;
+  top: -50px;
+  right: -65px;
 }
 
 .coming-soon .cross.one {
-    -webkit-animation-delay: .2s;
-    animation-delay: .2s;
-    right: -32px;
-    top: 5px;
+  animation-delay: 0.2s;
+  right: -32px;
+  top: 5px;
 }
 
 .coming-soon .cross.two {
-    -webkit-animation-delay: .9s;
-    animation-delay: .9s;
-    bottom: -35px;
-    right: 0
+  animation-delay: 0.9s;
+  bottom: -35px;
+  right: 0;
 }
 
 .coming-soon .cross.three {
-    -webkit-animation-delay: 1.4s;
-    animation-delay: 1.4s;
-    left: 0px;
-    top: 50px;
+  animation-delay: 1.4s;
+  left: 0px;
+  top: 50px;
+}
+
+@keyframes sparkle {
+  0% {
+    background-position: 0;
+  }
+
+  40% {
+    background-position: -731px;
+  }
+
+  to {
+    background-position: -731px;
+  }
+}
+
+@keyframes pop {
+  0% {
+    background-position: 0;
+  }
+
+  40% {
+    background-position: -816px;
+  }
+
+  to {
+    background-position: -816px;
+  }
+}
+
+@keyframes cross {
+  0% {
+    background-position: 0;
+  }
+
+  40% {
+    background-position: -600px;
+  }
+
+  to {
+    background-position: -600px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateZ(0);
+  }
+
+  40% {
+    transform: translate3d(0, -6px, 0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
 }
