@@ -8,17 +8,18 @@
 }
 
 .app-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+  padding: 20px 20px 100px;
+  width: 100%;
+  background: #7289da;
+  transition: padding .7s ease;
 }
 
 .app-intro {
   font-size: large;
 }
 
-@keyframes app-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
