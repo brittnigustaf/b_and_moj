@@ -17,7 +17,7 @@ class ComingSoon extends Component {
         <i className="sprite cross two" />
         <i className="sprite cross three" />
         <div className="anim-float">
-          <div>WORDS</div>
+          <div className="coming-soon-title">More Coming Soon</div>
         </div>
       </div>
     );

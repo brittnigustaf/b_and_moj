@@ -156,7 +156,7 @@
 
 .coming-soon {
     position: relative;
-    width: 55%;
+    margin: 75px;
 }
 
 .coming-soon .anim-float {
@@ -164,6 +164,13 @@
     animation: float 2.3s forwards ease infinite;
     position: relative;
     z-index: 2
+}
+
+.coming-soon-title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
 }
 
 .coming-soon .sprite {
@@ -174,56 +181,53 @@
 .coming-soon .pop.one {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
-    left: -50px;
-    top: 40px
+    left: -40px;
+    top: 0px;
 }
 
 .coming-soon .pop.two {
-    right: 40px;
-    top: -45px
+    right: 25px;
+    top: -50px;
 }
 
 .coming-soon .pop.three {
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
-    bottom: 12px;
-    left: 0;
-    opacity: .45
+    bottom: -40px;
+    left: 75px;
 }
 
 .coming-soon .sparkle.one {
     -webkit-animation-delay: .9s;
     animation-delay: .9s;
-    left: 20px;
-    top: -40px
+    bottom: -50px;
+    left: -65px;
 }
 
 .coming-soon .sparkle.two {
     -webkit-animation-delay: .6s;
     animation-delay: .6s;
-    bottom: 100px;
-    left: -30px
+    left: 20px;
+    top: -40px;
 }
 
 .coming-soon .sparkle.three {
     -webkit-animation-delay: 1.2s;
     animation-delay: 1.2s;
     bottom: -15px;
-    left: 180px;
-    z-index: 3
+    right: 50px;
 }
 
 .coming-soon .sparkle.four {
-    bottom: 80px;
-    right: -20px;
-    z-index: 3
+    top: -50px;
+    right: -65px;
 }
 
 .coming-soon .cross.one {
     -webkit-animation-delay: .2s;
     animation-delay: .2s;
     right: -32px;
-    top: 5px
+    top: 5px;
 }
 
 .coming-soon .cross.two {
@@ -236,6 +240,6 @@
 .coming-soon .cross.three {
     -webkit-animation-delay: 1.4s;
     animation-delay: 1.4s;
-    left: -8px;
-    top: 200px
+    left: 0px;
+    top: 50px;
 }
