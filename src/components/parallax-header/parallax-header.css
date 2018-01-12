@@ -13,17 +13,24 @@
 }
 
 .wedding-date {
-  font-family: Georgia;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: normal;
   margin: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 479px) {
   .wedding-date {
-    font-size: 72px;
+    font-size: 68px;
   }
 }
-@media screen and (min-width: 720px) {
+
+@media screen and (min-width: 480px) and (max-width: 779px) {
+  .wedding-date {
+    font-size: 98px;
+  }
+}
+
+@media screen and (min-width: 780px) {
   .wedding-date {
     font-size: 172px;
   }

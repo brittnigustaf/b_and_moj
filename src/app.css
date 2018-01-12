@@ -10,8 +10,20 @@ h1 {
 }
 
 h2 {
-  font-family: 'Amatic SC';
+  font-family: 'Amatic SC', sans-serif;
   font-size: 36px;
+}
+
+@media screen and (max-width: 720px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  h2 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -21,7 +33,7 @@ h3 {
 }
 
 p {
-  font-family: 'Bubbler One';
+  font-family: 'Bubbler One', sans-serif;
   font-size: 18px;
   margin: 0;
 }
@@ -33,8 +45,7 @@ p {
 
 .two-column {
   height: 400px;
-  flex: 1 1 50%;
-  min-width: 320px;
+  flex: 1 1 400px;
 }
 
 .card {
