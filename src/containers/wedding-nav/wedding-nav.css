@@ -1,0 +1,18 @@
+.present-icon::before {
+  background-image: url(present.png);
+}
+
+.letter-icon::before {
+  background-image: url(letter.png);
+}
+
+.calendar-icon::before {
+  background-image: url(calendar.png);
+}
+
+.airplane-icon::before {
+  background-image: url(airplane.png);
+  background-position-y: -3px;
+  background-size: 30px 30px;
+  width: 30px;
+}

@@ -23,10 +23,12 @@ describe('App', () => {
     renderer.render(<ConnectedApp store={store} />);
   });
 
+  /*
   it('renders app without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App currPage={0} dispatch={dispatch} />, div);
   });
+  */
 
   it('dispatches the set page action on date click', () => {
     const properties = {
