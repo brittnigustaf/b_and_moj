@@ -9,9 +9,7 @@ export class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="card">
-          <ParallaxHeader />
-        </div>
+        <ParallaxHeader />
         <div className="card">
           <h1> Ceremony </h1>
           <div className="wrapping-container">
