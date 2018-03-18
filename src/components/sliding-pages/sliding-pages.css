@@ -1,9 +1,14 @@
+.sliding-pages-viewport {
+    overflow-x: hidden;
+    width: 100vm;
+}
+
 .sliding-pages {
-    position: absolute;
-    left: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    -webkit-transition: all 0.5s linear;
+    left: 0px;
+    position: relative;
     transition: all 0.5s linear;
+    width: 100vw;
 }

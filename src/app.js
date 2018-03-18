@@ -1,65 +1,50 @@
 import React, { Component } from 'react';
-import ComingSoon from './components/coming-soon/coming-soon';
-import GoogleMaps from './components/google-maps/google-maps';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import ParallaxHeader from './components/parallax-header/parallax-header';
+import SlidingPage from './components/sliding-page/sliding-page';
+import SlidingPages from './components/sliding-pages/sliding-pages';
 import WeddingNav from './containers/wedding-nav/wedding-nav';
+import EventsPage from './pages/events-page/events-page';
+import GiftPage from './pages/gift-page/gift-page';
 
 import './app.css';
 
+const propTypes = {
+  currPage: PropTypes.number.isRequired
+};
+
 export class App extends Component {
   render() {
+    const { currPage } = this.props;
+
     return (
       <div className="app">
         <ParallaxHeader />
         <WeddingNav />
         <div className="nav-content">
-          <div className="card">
-            <h1> Ceremony </h1>
-            <div className="wrapping-container">
-              <div className="two-column">
-                <div className="image-background spring-grove-background">
-                  <div className="event-info">
-                    <h2>June 9, 2018 ♥ 1:00 p.m.</h2>
-                    <h3>Spring Grove Park</h3>
-                    <p>
-                      1800 Greenly Street <br /> Grandville, MI 49418
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="two-column">
-                <GoogleMaps location={{ lat: 42.83265, lng: -85.8255 }} />
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <h1> Reception </h1>
-            <div className="wrapping-container">
-              <div className="two-column">
-                <div className="image-background waddell-center-background">
-                  <div className="event-info">
-                    <h2>June 9, 2018 ♥ 6:00 p.m.</h2>
-                    <h3>The Waddell Center</h3>
-                    <p>
-                      1115 Taylor Avenue North <br /> Grand Rapids, MI 49503
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="two-column">
-                <GoogleMaps location={{ lat: 42.982772, lng: -85.668823 }} />
-              </div>
-            </div>
-          </div>
-          <div className="card">
-            <div className="placecard">
-              <ComingSoon />
-            </div>
-          </div>
+          <SlidingPages currPage={currPage}>
+            <SlidingPage>
+              <EventsPage />
+            </SlidingPage>
+            <SlidingPage />
+            <SlidingPage />
+            <SlidingPage>
+              <GiftPage />
+            </SlidingPage>
+          </SlidingPages>
         </div>
       </div>
     );
   }
 }
 
-export default App;
+App.propTypes = propTypes;
+
+const mapStateToProps = state => {
+  return {
+    currPage: state.currPage
+  };
+};
+
+export default connect(mapStateToProps)(App);
