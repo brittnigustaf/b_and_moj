@@ -19,22 +19,28 @@ h2 {
   }
 }
 
-@media screen and (min-width: 720px) {
-  h2 {
-    font-size: 36px;
-  }
-}
-
 h3 {
   font-family: 'Alex Brush', sans-serif;
   font-size: 24px;
   margin: 0;
 }
 
+@media screen and (max-width: 400px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
 p {
   font-family: 'Bubbler One', sans-serif;
   font-size: 18px;
   margin: 0;
+}
+
+@media screen and (max-width: 400px) {
+  p {
+    font-size: 16px;
+  }
 }
 
 .wrapping-container {
