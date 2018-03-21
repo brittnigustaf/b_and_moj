@@ -18,7 +18,10 @@ class TopNav extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { isSticky: false };
+    this.state = {
+      isSticky: false,
+      activeIndex: 0
+    };
   }
 
   componentDidMount() {
@@ -49,17 +52,23 @@ class TopNav extends Component {
     }
   }
 
+  onClick = index => {
+    this.setState({ activeIndex: index });
+    this.props.onClick(index);
+  };
+
   createNavItems() {
-    const { navItems, onClick } = this.props;
+    const { navItems } = this.props;
+    const { activeIndex } = this.state;
 
     const navItemsElems = new Array(navItems.length);
     for (let i = 0; i < navItems.length; i++) {
       let navItem = navItems[i];
       navItemsElems[i] = (
         <div
-          className={`nav-item ${navItem.iconClass}`}
+          className={`nav-item ${navItem.iconClass} ${activeIndex === i ? 'active' : ''}`}
           key={`nav-item-${i}`}
-          onClick={() => onClick(i)}
+          onClick={() => this.onClick(i)}
         >
           <div className="nav-title">{navItem.title}</div>
         </div>
@@ -72,9 +81,7 @@ class TopNav extends Component {
     const { isSticky } = this.state;
     const navItems = this.createNavItems();
 
-    return (
-      <div className={`top-nav ${isSticky ? 'sticky' : ''}`}>{navItems}</div>
-    );
+    return <div className={`top-nav ${isSticky ? 'sticky' : ''}`}>{navItems}</div>;
   }
 }
 

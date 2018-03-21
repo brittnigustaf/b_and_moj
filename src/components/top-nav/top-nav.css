@@ -38,6 +38,10 @@
   background-color: #f2f2f2;
 }
 
+.nav-item.active {
+  background-color: #f2f2f2;
+}
+
 @media screen and (max-width: 500px) {
   .nav-title {
     display: none;
