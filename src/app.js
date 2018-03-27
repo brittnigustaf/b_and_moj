@@ -28,7 +28,6 @@ export class App extends Component {
             <SlidingPage>
               <EventsPage />
             </SlidingPage>
-            <SlidingPage />
             <SlidingPage>
               <TravelPage />
             </SlidingPage>

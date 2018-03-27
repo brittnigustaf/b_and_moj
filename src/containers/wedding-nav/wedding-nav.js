@@ -21,7 +21,6 @@ export class WeddingNav extends Component {
       <TopNav
         navItems={[
           { title: 'Events', iconClass: 'calendar-icon' },
-          { title: 'RSVP', iconClass: 'letter-icon' },
           { title: 'Travel', iconClass: 'airplane-icon' },
           { title: 'Gift Registry', iconClass: 'present-icon' }
         ]}
