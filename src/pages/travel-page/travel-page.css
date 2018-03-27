@@ -1,0 +1,149 @@
+.travel-page {
+  padding: 50px 0;
+}
+
+.travel-page-title {
+  font-size: 48px;
+  color: #008080;
+}
+
+.travel-page-title::before {
+  background-image: url(images/hotel-icon.png);
+  background-size: 48px 48px;
+  content: "";
+  display: inline-block;
+  height: 48px;
+  margin-right: 15px;
+  vertical-align: top;
+  width: 48px;
+}
+
+.three-stars-icon {
+  height: 25px;
+}
+
+.hotel-name {
+  margin: 10px 0;
+  white-space: nowrap;
+}
+
+.hotel-address {
+  line-height: 24px;
+  margin: 15px 0;
+}
+
+.hotel-phone {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hotel-phone::before {
+  background-image: url(images/phone-icon.png);
+  background-size: 16px 16px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+  width: 16px;
+}
+
+.phone-number {
+  color: #008080;
+  text-decoration: none;
+}
+
+.phone-number:hover {
+  color: #00b3b3;
+}
+
+.hotel-link {
+  color: #008080;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.hotel-link:hover {
+  color: #00b3b3;
+}
+
+.empty-hotel-link {
+  padding: 12px 0;
+}
+
+.hotel-instructions {
+  margin: 35px 0 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hotel-date {
+  color: #008080;
+  font-family: 'Alex Brush', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 5px 0 0;
+}
+
+.hotel-room-rates {
+  margin: 15px auto;
+}
+
+.hotel-room-rate {
+  text-align: left;
+}
+
+.hotel-room-rate::before {
+  background-image: url(images/bed-icon.png);
+  background-size: 25px 25px;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  vertical-align: top;
+  width: 25px;
+}
+
+.hotel-parking-rate::before {
+  background-image: url(images/parking-icon.png);
+  background-size: 17px 17px;
+  content: "";
+  display: inline-block;
+  height: 17px;
+  vertical-align: middle;
+  width: 17px;;
+}
+
+.hotel-room {
+  padding: 0 15px 0 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.hotel-room-price {
+  font-weight: bold;
+  text-align: right;
+}
+
+.teal-text {
+  color: #008080;
+}
+
+.travel.flex-items {
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 630px) {
+  .travel.flex-item {
+    border-top: 1px solid #008080;
+    padding: 50px 0;
+  }
+}
+
+@media screen and (min-width: 631px) {
+  .travel.flex-item {
+    border-left: 1px solid #008080;
+  }
+}

@@ -6,6 +6,7 @@ import SlidingPage from './components/sliding-page/sliding-page';
 import SlidingPages from './components/sliding-pages/sliding-pages';
 import WeddingNav from './containers/wedding-nav/wedding-nav';
 import EventsPage from './pages/events-page/events-page';
+import TravelPage from './pages/travel-page/travel-page';
 import RegistryPage from './pages/registry-page/registry-page';
 
 import './app.css';
@@ -28,7 +29,9 @@ export class App extends Component {
               <EventsPage />
             </SlidingPage>
             <SlidingPage />
-            <SlidingPage />
+            <SlidingPage>
+              <TravelPage />
+            </SlidingPage>
             <SlidingPage>
               <RegistryPage />
             </SlidingPage>

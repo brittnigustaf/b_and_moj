@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ComingSoon from '../../components/coming-soon/coming-soon';
 import GoogleMaps from '../../components/google-maps/google-maps';
 
+import './events-page.css';
+
 export class EventsPage extends Component {
   render() {
     return (

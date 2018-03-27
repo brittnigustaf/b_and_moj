@@ -26,12 +26,15 @@
   position: absolute;
 }
 
-.registry-flex-items {
+.flex-items {
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
+}
+
+.registry.flex-items {
   max-width: 800px;
 }
 
@@ -59,26 +62,26 @@
 }
 
 @media screen and (max-width: 630px) {
-  .registry-flex-item {
+  .flex-item {
     border-top: 1px solid #0D3862;
     flex: 0 0 0;
     margin: 0 50px;
     padding: 25px 0;
   }
 
-  .registry-flex-item:first-child {
+  .flex-item:first-child {
     border-top: none;
   }
 }
 
 @media screen and (min-width: 631px) {
-  .registry-flex-item {
+  .flex-item {
     border-left: 1px solid #0D3862;
     flex: 1 0 0;
     margin: 25px 0;
   }
 
-  .registry-flex-item:first-child {
+  .flex-item:first-child {
     border-left: none;
   }
 }

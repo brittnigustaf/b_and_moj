@@ -25,8 +25,8 @@ export class RegistryPage extends Component {
             </p>
           </div>
         </div>
-        <div className="registry-flex-items">
-          <div className="registry-flex-item">
+        <div className="registry flex-items">
+          <div className="flex-item">
             <a
               className="registry-button"
               target="_blank"
@@ -40,7 +40,7 @@ export class RegistryPage extends Component {
               />
             </a>
           </div>
-          <div className="registry-flex-item">
+          <div className="flex-item">
             <a
               className="registry-button"
               target="_blank"
