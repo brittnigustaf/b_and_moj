@@ -1,6 +1,6 @@
 .sliding-pages-viewport {
     overflow-x: hidden;
-    width: 100vm;
+    width: 100%;
 }
 
 .sliding-pages {
@@ -10,5 +10,5 @@
     left: 0px;
     position: relative;
     transition: all 0.5s linear;
-    width: 100vw;
+    width: 100%;
 }

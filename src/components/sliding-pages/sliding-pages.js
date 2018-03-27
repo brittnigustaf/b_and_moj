@@ -45,10 +45,7 @@ class SlidingPages extends Component {
   };
 
   getVisibleElementHeight = () => {
-    const viewHeight = Math.max(
-      document.documentElement.clientHeight,
-      window.innerHeight || 0
-    );
+    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     const headerHeight = Math.max(viewHeight * 0.4, 500);
     const visibleHeaderHeight = Math.max(headerHeight - window.scrollY, 0);
     const topNavHeight = 60;
@@ -70,7 +67,7 @@ class SlidingPages extends Component {
 
     return (
       <div className="sliding-pages-viewport">
-        <div className="sliding-pages" style={{ left: currPosition + 'vw' }}>
+        <div className="sliding-pages" style={{ left: currPosition + '%' }}>
           {childrenWithProps}
         </div>
       </div>

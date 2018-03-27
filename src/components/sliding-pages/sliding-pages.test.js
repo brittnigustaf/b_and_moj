@@ -10,24 +10,24 @@ describe('Sliding Pages', () => {
 
   it('goes to the correct position based on states current page', () => {
     let slidingPages = new SlidingPages({ currPage: undefined });
-    expect(slidingPages.render().props.style).toEqual({ left: '0vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '0%' });
 
     slidingPages = new SlidingPages({ currPage: 'yo' });
-    expect(slidingPages.render().props.style).toEqual({ left: '0vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '0%' });
 
     slidingPages = new SlidingPages({ currPage: null });
-    expect(slidingPages.render().props.style).toEqual({ left: '0vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '0%' });
 
     slidingPages = new SlidingPages({ currPage: NaN });
-    expect(slidingPages.render().props.style).toEqual({ left: '0vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '0%' });
 
     slidingPages = new SlidingPages({ currPage: 2 });
-    expect(slidingPages.render().props.style).toEqual({ left: '-200vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '-200%' });
 
     slidingPages = new SlidingPages({ currPage: 100 });
-    expect(slidingPages.render().props.style).toEqual({ left: '-10000vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '-10000%' });
 
     slidingPages = new SlidingPages({ currPage: -1 });
-    expect(slidingPages.render().props.style).toEqual({ left: '100vw' });
+    expect(slidingPages.render().props.style).toEqual({ left: '100%' });
   });
 });
