@@ -35,7 +35,7 @@ export class TravelPage extends Component {
             <div className="hotel-instructions">
               Please book by
               <div className="hotel-date"> May 8, 2018 </div>
-              to recieve the discounted rate
+              to receive the discounted rate
               <table className="hotel-room-rates">
                 <tbody>
                   <tr className="hotel-room-rate">
@@ -76,7 +76,7 @@ export class TravelPage extends Component {
             <div className="hotel-instructions">
               Please book by
               <div className="hotel-date"> May 5, 2018 </div>
-              to recieve the discounted rate
+              to receive the discounted rate
               <table className="hotel-room-rates">
                 <tbody>
                   <tr className="hotel-room-rate">
