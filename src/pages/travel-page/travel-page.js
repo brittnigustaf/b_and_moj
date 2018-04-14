@@ -72,7 +72,14 @@ export class TravelPage extends Component {
                 (616) 451-2300{' '}
               </a>
             </div>
-            <div className="empty-hotel-link" />
+            <a
+              className="hotel-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://homewoodsuites.hilton.com/en/hw/groups/personalized/G/GRRDOHW-MGB-20180609/index.jhtml"
+            >
+              Book online
+            </a>
             <div className="hotel-instructions">
               Please book by
               <div className="hotel-date"> May 5, 2018 </div>
